@@ -1,0 +1,138 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: calc(100vh - 80px);
+	width: calc(100vw - 80px);
+	margin: 40px;
+	padding: 40px;
+	border: 3px solid black;
+	border-radius: 15px;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 12px;
+}
+
+main {
+	/* background-color: hsla(39, 50%, 30%, 0.9); */
+	display: grid;
+	gap: 5px;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: 20% 80%;
+	grid-template-areas:
+		"rt ri ri ri ri rb"
+		"ji ji ji jo jo jo"
+	;
+}
+
+.apiinput {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	border: 0.5px solid grey;
+	padding-left: 20px;
+}
+
+.apiinput #apirequest {
+	border: none;
+	margin-left: 5px;
+}
+
+main > select {
+	grid-area: rt;
+}
+
+main > .apiinput {
+	grid-area: ri;
+}
+
+main > button {
+	grid-area: rb;
+}
+
+main > .jsoninput {
+	grid-area: ji;
+}
+
+main > .jsonoutput {
+	grid-area: jo;
+}
+
+.jsoninput {
+	padding: 8px;
+	display: grid;
+	gap: 5px;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-template-areas:
+		"hd hd hd hd hd hd"
+		"l1 l1 i1 i1 i1 i1"
+		"l2 l2 i2 i2 i2 i2"
+		"l3 l3 i3 i3 i3 i3"
+		"ai ai af af al al"
+	;
+}
+
+.jsoninput > * {
+	height: 30px;
+	line-height: 30px;
+}
+
+.jsoninput > h3 {
+	grid-area: hd;
+	text-align: center;
+}
+
+.jsoninput > label[for=bookid] {
+	grid-area: l1;
+	text-align: right;
+}
+
+.jsoninput > #bookid {
+	grid-area: i1;
+}
+
+.jsoninput > label[for=bookname] {
+	grid-area: l2;
+	text-align: center;
+}
+
+.jsoninput > #bookname {
+	grid-area: i2;
+}
+
+.jsoninput > label[for=bookisbn] {
+	grid-area: l3;
+	text-align: center;
+}
+
+.jsoninput > #bookisbn {
+	grid-area: i3;
+}
+
+.jsoninput > span {
+	grid-area: ai;
+}
+
+.jsoninput > #authorfirst {
+	grid-area: af;
+}
+
+.jsoninput > #authorlast {
+	grid-area: al;
+}
+
+.jsonoutput {
+	padding: 8px;
+	display: flex;
+	flex-direction: column;
+}
+
+.jsonoutput > h3 {
+	text-align: center;
+}

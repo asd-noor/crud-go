@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<link rel="stylesheet" href="./style.css" type="text/css" media="screen">
+	<script type="text/javascript" src="./script.js" defer></script>
+	<title>CRUD</title>
+  </head>
+
+  <body>
+	<h1>CRUD Testing</h1>
+
+	<main>
+	  <select id="method">
+		<option value="get" selected>GET</option>
+		<option value="post">POST</option>
+		<option value="put">PUT</option>
+		<option value="delete">DELETE</option>
+	  </select>
+
+	  <div class="apiinput">
+		<span class="inputprefix">server/</span>
+		<input type="text" placeholder="hint of request" id="apirequest">
+	  </div>
+
+	  <button type="button">Send</button>
+
+	  <div class="jsoninput">
+		<h3>Input</h3>
+
+		<label for="bookid">Book ID:</label>
+		<input type="text" id="bookid">
+
+		<label for="bookname">Book Name:</label>
+		<input type="text" id="bookname">
+
+		<label for="bookisbn">Book ISBN:</label>
+		<input type="text" id="bookisbn">
+
+		<span>Author: </span>
+		<input type="text" placeholder="First Name" id="authorfirst">
+		<input type="text" placeholder="Last Name" id="authorlast">
+	  </div>
+	  <div class="jsonoutput">
+		<h3>Result</h3>
+		<pre id="jsonresult">
+		  hello
+		</pre>
+	  </div>
+	</main>
+  </body>
+</html>
